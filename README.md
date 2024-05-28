@@ -32,21 +32,21 @@
   ```
 
   - `<!DOCTYPE html>`: Define que este documento é um documento HTML
-  - "<html>": É o elemento raiz de uma página HTML
-  - "<head>": Elemento que contém meta informações sobre a página HTML
-  - "<title>": Elemento que especifica um título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página)
-  - "<body>": Elemento que define o corpo do documento e é um contêiner para todos os conteúdos visíveis, como títulos, parágrafos, imagens, hiperlinks, tabelas, listas, etc.
-  - "<h1>": Elemento que define um título grande
-  - "<p>": Elemento que define um parágrafo
+  - `<html>`: É o elemento raiz de uma página HTML
+  - `<head>`: Elemento que contém meta informações sobre a página HTML
+  - `<title>`: Elemento que especifica um título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página)
+  - `<body>`: Elemento que define o corpo do documento e é um contêiner para todos os conteúdos visíveis, como títulos, parágrafos, imagens, hiperlinks, tabelas, listas, etc.
+  - `<h1>`: Elemento que define um título grande
+  - `<p>`: Elemento que define um parágrafo
 - Existem os atributos que fazem parte de um elemento.
   - No elemento img (imagem), podemos usar atributos.
     - "src": Que é a origem da imagem, ou seja, qual é o caminho que se encontra a imagem que será usada.
     - "alt": Que é um texto alternativo. É importante para descrever o que é aquela imagem.
 - O metadado http-equiv="X-UA-Compatible" content="IE=edge" é utilizado para configurar a página web no Internet Explorer, para que ela esteja sempre em sua versão mais recente.
 - O metadado charset="UTF-8" é empregado para repassar aos navegadores qual é o formato de codificação de caracteres utilizado naquele documento.
-- Para criarmos um título em destaque abrimos a tag com <h1> e fechamos com </h1>. E para adicionar parágrafos usamos as tags <p> e também fechamos com </p>.
-- A tag <button> é diferente da tag <a>, pois, além da semântica, a finalidade também é outra. Usamos <button> para criar um botão de ação e <a> para indicar um link.
-  - As tags são diferentes em ambos os aspectos e é necessário saber utilizar cada uma na sua função correta. Enquanto <button> pode ser utilizada para ações como envios de formulários, a tag <a> não possui essa funcionalidade, já que seu papel é apenas redirecionar o usuário para diferentes urls.
+- Para criarmos um título em destaque abrimos a tag com `<h1>` e fechamos com `</h1>`. E para adicionar parágrafos usamos as tags `<p>` e também fechamos com `</p>`.
+- A tag `<button>` é diferente da tag `<a>`, pois, além da semântica, a finalidade também é outra. Usamos `<button>` para criar um botão de ação e `<a>` para indicar um link.
+  - As tags são diferentes em ambos os aspectos e é necessário saber utilizar cada uma na sua função correta. Enquanto `<button>` pode ser utilizada para ações como envios de formulários, a tag `<a>` não possui essa funcionalidade, já que seu papel é apenas redirecionar o usuário para diferentes urls.
 
 ## Modo Quirks
 >
@@ -69,11 +69,11 @@
 - É uma linguagem de estilização, portanto não é uma linguagem de programação.
 - Economiza muito trabalho. Ele pode controlar o layout de várias páginas da web de uma só vez
 - O CSS externo é o mais indicado e recomendado, pois além dos seus arquivos HTML ficarem com uma estrutura mais limpa e tamanho menor, os mesmos estilos do arquivo .css podem ser usados em várias páginas.
-- O HTML não reconhece a página de estilo automaticamente, portanto é necessário adicionar a tag "<link rel="stylesheet" href="nomedoarquivo.css">" dentro do <head> para que a estilização seja aplicada.
-- O atributo "id" só podem ser usados uma vez dentro de uma página HTML, no sentido de que eles só devem aparecer SOMENTE UMA VEZ numa tag (que é chamada de elemento). Além disso, cada elemento só deve ter um ID. Por exemplo, se eu quiser inserir um ID nomeado de "meu-nome" numa <div>, não poderei mencionar este ID com este nome em nenhum outro elemento.
+- O HTML não reconhece a página de estilo automaticamente, portanto é necessário adicionar a tag `<link rel="stylesheet" href="nomedoarquivo.css">` dentro do `<head>` para que a estilização seja aplicada.
+- O atributo "id" só podem ser usados uma vez dentro de uma página HTML, no sentido de que eles só devem aparecer SOMENTE UMA VEZ numa tag (que é chamada de elemento). Além disso, cada elemento só deve ter um ID. Por exemplo, se eu quiser inserir um ID nomeado de "meu-nome" numa `<div>`, não poderei mencionar este ID com este nome em nenhum outro elemento.
   - Cada elemento pode ter apenas um ID;
   - Cada página pode ter apenas um elemento com aquele ID.
-- Cada elemento (tag) pode receber mais de uma "class" e estas mesmas classes podem ser usadas várias vezes dentro da mesma página HTML. Pegando o mesmo exemplo citado acima, eu poderia criar uma "class='meu-nome'" dentro de uma '<div>' e usar este mesmo elemento em outros locais da página ou usar o mesmo nome "meu-nome" em outra tag ou ainda acrescentar outra classe dentro do mesmo elemento logo após "meu-nome".
+- Cada elemento (tag) pode receber mais de uma "class" e estas mesmas classes podem ser usadas várias vezes dentro da mesma página HTML. Pegando o mesmo exemplo citado acima, eu poderia criar uma "class='meu-nome'" dentro de uma `<div>` e usar este mesmo elemento em outros locais da página ou usar o mesmo nome "meu-nome" em outra tag ou ainda acrescentar outra classe dentro do mesmo elemento logo após "meu-nome".
   - Você pode usar a mesma classe para vários elementos;
   - Você pode usar várias classes para um mesmo elemento;
   - Para estilizar uma class é necessário utilizar o ponto final antes de chamar o nome atribuído à classe.
@@ -83,6 +83,9 @@
   - Borda: Uma borda que circunda o preenchimento e o conteúdo
   - Margem: Limpa uma área fora da fronteira. A margem é transparente
 - Reset CSS: Limpa todos os padrões dos navegadores.
+- Viewport é a porção de área visível de um plano e é utilizada como unidade de medida no CSS para criar páginas Web 100% responsivas. Em outras palavras, a viewport varia de dispositivo para dispositivo, por exemplo em computadores, tablets e celulares, cada tela possui dimensões diferentes e enquanto uma página não responsiva apresentaria os elementos desproporcionais, uma página responsiva utilizando viewport teria seus elementos adequados a cada proporção.
+- box-sizing é responsável por como a largura e a altura totais de um elemento são calculadas.
+- Flexbox é uma ferramenta do CSS que visa organizar os elementos de uma página HTML de forma dinâmica e mantendo um layout flexível.
 
 ### Propriedades CSS
 
