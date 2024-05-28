@@ -4,7 +4,7 @@
 
 - É uma boa prática termos pastas e subpastas que explicitem e organizem os arquivos de código de forma lógica.
 - Nem sempre os projetos terão apenas dois ou três arquivos, a depender do nível de complexidade, podem chegar na casa das centenas de arquivos. Portanto, é uma boa prática separar arquivos por categorias claras e objetivas fazendo uso de pastas e subpastas.
-- Por padrão o arquivo principal html é chamado "index.html". O termo “index” significa “índice”, pois essa esse arquivo será a página principal, onde irá conter os links que redirecionam para as outras páginas do seu projeto. Sendo assim, esse nome facilita com que esse arquivo seja reconhecido como “padrão” dentro de sua pasta e será a primeira página carregada sempre que seu projeto for aberto.
+- Por padrão o arquivo principal html é chamado "index.html". O termo “index” significa “índice”, pois esse arquivo será a página principal, onde irá conter os links que redirecionam para as outras páginas do seu projeto. Sendo assim, esse nome facilita para que este arquivo seja reconhecido como “padrão” dentro de sua pasta e será a primeira página carregada sempre que seu projeto for aberto.
 - Geralmente um projeto de Front-end possui vários arquivos sendo eles HTML, CSS, Javascript, etc. Quando iniciamos, precisamos criar uma pasta para organizar os nossos arquivos.
 
 ## O que é HTML?
@@ -31,7 +31,7 @@
     </html>
   ```
 
-  - "<!DOCTYPE html>": Define que este documento é um documento HTML
+  - `<!DOCTYPE html>`: Define que este documento é um documento HTML
   - "<html>": É o elemento raiz de uma página HTML
   - "<head>": Elemento que contém meta informações sobre a página HTML
   - "<title>": Elemento que especifica um título para a página HTML (que é mostrado na barra de título do navegador ou na guia da página)
