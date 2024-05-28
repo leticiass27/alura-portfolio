@@ -1,0 +1,45 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    background: #000;
+    box-sizing: border-box;
+}
+
+h1 {
+    color: #FFF;
+}
+
+p {
+    color: #F3ECFD;
+}
+
+.tituloDestaque {
+    color: #1CEB8E;
+}
+
+.paragrafoDestaque {
+    color: #FF7AC5;
+}
+
+a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+span {
+    color: #1CEB8E;
+    border: 1px solid #1CEB8E;
+    padding: 10px;
+}
+
+img {
+    width: 300px;
+    height: auto;
+    filter: grayscale(1);
+
+}
