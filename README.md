@@ -92,6 +92,7 @@
 - "background-color" é o atributo de cor de fundo.
 - "color" é a cor do texto
 - "background" serve para configurar todas as propriedades do plano de fundo em uma declaração mais implícita.
+- "border" é responsável pelas bordas dos elementos HTML. Ao inserir um elemento em um documento HTML, há várias possibilidades de estilizar sua borda. Você pode utilizar estilos que a propriedade já possui, além de poder também alterar sua cor, espessura e até mesmo seu formato!
 
 ## Ajuda
 
