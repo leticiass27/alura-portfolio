@@ -94,6 +94,7 @@
 - "background" serve para configurar todas as propriedades do plano de fundo em uma declaração mais implícita.
 - "border" é responsável pelas bordas dos elementos HTML. Ao inserir um elemento em um documento HTML, há várias possibilidades de estilizar sua borda. Você pode utilizar estilos que a propriedade já possui, além de poder também alterar sua cor, espessura e até mesmo seu formato!
 - "gap" não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column. Sua sintaxe é bem simples e ela aceita um ou dois valores.
+- "flex-direction: column" o objeto/valor irá se posicionar verticalmente, já que define que a direção do display: flex deve ser em 'coluna'.
 
 ## Ajuda
 
@@ -103,10 +104,13 @@
 - CTRL + N: Abre um novo arquivo
 - CTRL + S: Salva o arquivo
 - ALT + Z: Quebra a linha da area de código
+- CTRL + K + C: Comenta a(s) linha(s) (de acordo com o tipo do arquivo)
 
 ### Links
 
 - Introdução com [W3Schools](https://www.w3schools.com/html/html_intro.asp)
+- CSS Borders com [W3Schools](https://www.w3schools.com/css/css_border.asp)
+- CSS Hover com [W3Schools](https://www.w3schools.com/CSSref/sel_hover.php)
 
 ### Extensões (VSCode)
 
