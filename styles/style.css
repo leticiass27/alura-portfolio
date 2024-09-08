@@ -13,6 +13,23 @@ body {
     overflow: hidden;
 }
 
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 12%;
+}
+
+.cabecalho__menu__link {
+    font-family: "Montserrat", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FF7AC5;
+    text-decoration: none;
+}
+
 .apresentacao {
     margin: 10% 12%;
     display: flex;
@@ -110,4 +127,13 @@ body {
     height: auto;
     filter: grayscale(1);
     border: 2px solid #1CEB8E;
+}
+
+.rodape {
+    color: #000;
+    background-color: #FF7AC5;
+    padding: 14px;
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
 }

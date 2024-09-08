@@ -47,6 +47,7 @@
 - Para criarmos um título em destaque abrimos a tag com `<h1>` e fechamos com `</h1>`. E para adicionar parágrafos usamos as tags `<p>` e também fechamos com `</p>`.
 - A tag `<button>` é diferente da tag `<a>`, pois, além da semântica, a finalidade também é outra. Usamos `<button>` para criar um botão de ação e `<a>` para indicar um link.
   - As tags são diferentes em ambos os aspectos e é necessário saber utilizar cada uma na sua função correta. Enquanto `<button>` pode ser utilizada para ações como envios de formulários, a tag `<a>` não possui essa funcionalidade, já que seu papel é apenas redirecionar o usuário para diferentes urls.
+- Ao adicionar links de navegação ao `<header>`, devemos criar uma `<nav>`, com um `<a>` para cada link, e adicionar seu endereço na propriedade href.
 
 ## Modo Quirks
 >
