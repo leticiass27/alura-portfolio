@@ -48,6 +48,13 @@
 - A tag `<button>` é diferente da tag `<a>`, pois, além da semântica, a finalidade também é outra. Usamos `<button>` para criar um botão de ação e `<a>` para indicar um link.
   - As tags são diferentes em ambos os aspectos e é necessário saber utilizar cada uma na sua função correta. Enquanto `<button>` pode ser utilizada para ações como envios de formulários, a tag `<a>` não possui essa funcionalidade, já que seu papel é apenas redirecionar o usuário para diferentes urls.
 - Ao adicionar links de navegação ao `<header>`, devemos criar uma `<nav>`, com um `<a>` para cada link, e adicionar seu endereço na propriedade href.
+- Para facilitar em alguns momentos do codigo, quando formos criar uma tag e essa tag for de uma vez podemos, com a ajuda do VSCode, multiplicar a quantidade daquela tag. Exemplo: Queremos colocar dois paragrafos no nosso codigo, então escrevemos <p*2> e dá um enter, irá aparecer duas tags "p"
+  - E se quiser ja nomear aquela tag, só adicionar ponto (quando for uma class, caso queira ser um id só trocar o ponto pela hash) + apelido da tag. Exemplo: "<p.paragrafo__sobremim>" ou "<p*2.paragrafo__sobremim>" ou "<p#titulo__sobremim>"
+    - `<p id="titulo__sobremim"></p>`
+    - ```
+        <p class="paragrafo"></p>
+        <p class="paragrafo"></p>
+      ```
 
 ## Modo Quirks
 >
@@ -87,6 +94,27 @@
 - Viewport é a porção de área visível de um plano e é utilizada como unidade de medida no CSS para criar páginas Web 100% responsivas. Em outras palavras, a viewport varia de dispositivo para dispositivo, por exemplo em computadores, tablets e celulares, cada tela possui dimensões diferentes e enquanto uma página não responsiva apresentaria os elementos desproporcionais, uma página responsiva utilizando viewport teria seus elementos adequados a cada proporção.
 - box-sizing é responsável por como a largura e a altura totais de um elemento são calculadas.
 - Flexbox é uma ferramenta do CSS que visa organizar os elementos de uma página HTML de forma dinâmica e mantendo um layout flexível.
+- O atributo ":root" irá criar variaveis para que você não precise repetir o mesmo codigo varias vezes.
+  - A variável precisa ser declarada com um hífen duplo (--) no início, para que seja reconhecida como variável e não como propriedade CSS.
+  - Para que o valor seja alterada, é preciso que a variável não seja apenas declarada dentro de :root, ela precisa ser aplicada também dentro das tags.
+  - Exemplo:
+    ```css
+      :root {
+        --cor-fundo: #000;
+        --cor-secundaria: #FF7AC5;
+
+        --fonte-texto: "Montserrat", sans-serif;
+      }
+
+      body {
+        background: var(--cor-fundo);
+      }
+
+      .cabecalho__menu__link {
+        font-family: var(--fonte-texto);
+        color: var(--cor-secundaria);
+      }
+  ```
 
 ### Propriedades CSS
 
