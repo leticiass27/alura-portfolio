@@ -125,6 +125,42 @@
 - "gap" não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column. Sua sintaxe é bem simples e ela aceita um ou dois valores.
 - "flex-direction: column" o objeto/valor irá se posicionar verticalmente, já que define que a direção do display: flex deve ser em 'coluna'.
 
+### Unidade de medida
+- CSS tem várias unidades diferentes para expressar um comprimento.
+- Muitas propriedades CSS aceitam valores de "comprimento", como width, margin, padding, font-size, etc.
+- Comprimento é um número seguido por uma unidade de comprimento, como 10px, 2em, etc.
+- Para algumas propriedades CSS, comprimentos negativos são permitidos.
+- Existem dois tipos de unidades de comprimento: absoluta e relativa .
+- Um espaço em branco não pode aparecer entre o número e a unidade. No entanto, se o valor for 0, a unidade pode ser omitida.
+
+#### Unidades absolutas
+- As unidades de comprimento absoluto são fixas e um comprimento expresso em qualquer uma delas aparecerá exatamente como aquele tamanho.
+- Unidades de comprimento absoluto não são recomendadas para uso em tela, porque os tamanhos de tela variam muito. No entanto, elas podem ser usadas se o meio de saída for conhecido, como para layout de impressão.
+  - cm (centimetros)
+  - mm (milimetros)
+  - in (polegadas[1in = 96px = 2.54cm])
+  - px (pixels [1px = 1/96th of 1in])
+    - Pixels (px) são relativos ao dispositivo de visualização. Para dispositivos de baixo dpi, 1px é um pixel de dispositivo (ponto) da tela. Para impressoras e telas de alta resolução, 1px implica em vários pixels de dispositivo.
+  - pt (points [1pt = 1/72 of 1in])
+  - pc (picas [1pc = 12 pt])
+
+#### Unidades relativas
+- Unidades de comprimento relativo especificam um comprimento relativo a outra propriedade de comprimento. Unidades de comprimento relativo escalam melhor entre diferentes mídias de renderização.
+- As unidades "em" e "rem" são práticas para criar um layout perfeitamente escalável!
+- Viewport = tamanho da janela do navegador. Se a viewport tiver 50 cm de largura, 1vw = 0,5 cm.
+  - em: Em relação ao tamanho da fonte do elemento (2em significa 2 vezes o tamanho da fonte atual)
+  - ex: Em relação à altura x da fonte atual (raramente usada)
+  - ch: Em relação à largura do "0" (zero)	
+  - rem: Em relação ao tamanho da fonte do elemento raiz
+    - Usamos uma escala para mudar de pixels para rem. Nessa escala utiliza-se o valor mais recomendado pelos navegadores, que é de 16, então 16px equivale a 1rem e 32px equivale a 2rem.
+    - Quando não é definido um tamanho de fonte padrão na raiz do projeto, um REM por padrão do browser equivale a 16px.
+  - vw:	Relativo a 1% da largura da janela de visualização*
+  - vh:	Relativo a 1% da altura da janela de visualização*
+  - vmin: Em relação a 1% da dimensão menor da janela de visualização*
+  - vmax: Em relação a 1% da dimensão maior da janela de visualização*
+  - %: Em relação ao elemento pai
+
+
 ## Ajuda
 
 ### VSCode
@@ -140,6 +176,7 @@
 - Introdução com [W3Schools](https://www.w3schools.com/html/html_intro.asp)
 - CSS Borders com [W3Schools](https://www.w3schools.com/css/css_border.asp)
 - CSS Hover com [W3Schools](https://www.w3schools.com/CSSref/sel_hover.php)
+- Unidades CSS com [W3Schools](https://www.w3schools.com/cssref/css_units.php)
 
 ### Extensões (VSCode)
 
