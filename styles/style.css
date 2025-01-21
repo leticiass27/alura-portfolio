@@ -24,13 +24,13 @@ body {
     overflow: hidden;
 }
 
+.cabecalho {
+    padding: 2% 0% 0% 12%;
+}
+
 .cabecalho__menu {
     display: flex;
     gap: 80px;
-}
-
-.cabecalho {
-    padding: 2% 0% 0% 12%;
 }
 
 .cabecalho__menu__link {
@@ -46,6 +46,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 50px;
 }
 
 .apresentacao__conteudo {
@@ -150,4 +151,30 @@ body {
     left: 0;
     bottom: 0;
     width: 100%;
+}
+
+@media (max-width: 425px) {
+    body {
+        overflow: scroll;
+        height: auto;
+    }
+
+    .cabecalho {
+        padding: 6%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+
+    .apresentacao {
+        margin-top: 2%;
+        flex-direction: column-reverse;
+        overflow: hidden;
+    }
+
+    .foto {
+        width: 230px;
+        height: auto;
+    }
 }

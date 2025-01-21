@@ -51,10 +51,6 @@
 - Para facilitar em alguns momentos do codigo, quando formos criar uma tag e essa tag for de uma vez podemos, com a ajuda do VSCode, multiplicar a quantidade daquela tag. Exemplo: Queremos colocar dois paragrafos no nosso codigo, então escrevemos <p*2> e dá um enter, irá aparecer duas tags "p"
   - E se quiser ja nomear aquela tag, só adicionar ponto (quando for uma class, caso queira ser um id só trocar o ponto pela hash) + apelido da tag. Exemplo: "<p.paragrafo__sobremim>" ou "<p*2.paragrafo__sobremim>" ou "<p#titulo__sobremim>"
     - `<p id="titulo__sobremim"></p>`
-    - ```
-        <p class="paragrafo"></p>
-        <p class="paragrafo"></p>
-      ```
 
 ## Modo Quirks
 >
@@ -97,24 +93,10 @@
 - O atributo ":root" irá criar variaveis para que você não precise repetir o mesmo codigo varias vezes.
   - A variável precisa ser declarada com um hífen duplo (--) no início, para que seja reconhecida como variável e não como propriedade CSS.
   - Para que o valor seja alterada, é preciso que a variável não seja apenas declarada dentro de :root, ela precisa ser aplicada também dentro das tags.
-  - Exemplo:
-    ```css
-      :root {
-        --cor-fundo: #000;
-        --cor-secundaria: #FF7AC5;
-
-        --fonte-texto: "Montserrat", sans-serif;
-      }
-
-      body {
-        background: var(--cor-fundo);
-      }
-
-      .cabecalho__menu__link {
-        font-family: var(--fonte-texto);
-        color: var(--cor-secundaria);
-      }
-  ```
+- Media Queries permite que você aplique estilos CSS dependendo do tipo de mídia de um dispositivo (como impressão ou tela) ou outros recursos ou características, como resolução ou orientação da tela, proporção , largura ou altura da janela de visualização do navegador , preferências do usuário, como preferir movimento reduzido, uso de dados ou transparência.
+  - Exemplo: max-width: 768px. A media querie sabe que precisa ter uma largura de no máximo "768px" para aplicar os estilos CSS: @media (max-width: 768px).
+  - Podemos definir uma largura máxima de "425px" para o celular: @media (max-width: 425px), e em outra media query definir uma largura máxima de "768px" para os tablets: @media (max-width: 768px), e então atribuímos os ajustes necessários dentro de cada media query, dessa forma teremos nosso site 100% responsivo.
+  - Podemos também definir intervalos para os tamanhos de telas com um único media query, atribuímos o valor mínimo e depois o valor máximo separando ele pelo atributo and, veja: @media (min-width: 426px ) and (max-width: 768px), nesse caso os estilos serão aplicados em telas de no mínimo "426px" e de no máximo "768px".
 
 ### Propriedades CSS
 
@@ -124,6 +106,12 @@
 - "border" é responsável pelas bordas dos elementos HTML. Ao inserir um elemento em um documento HTML, há várias possibilidades de estilizar sua borda. Você pode utilizar estilos que a propriedade já possui, além de poder também alterar sua cor, espessura e até mesmo seu formato!
 - "gap" não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column. Sua sintaxe é bem simples e ela aceita um ou dois valores.
 - "flex-direction: column" o objeto/valor irá se posicionar verticalmente, já que define que a direção do display: flex deve ser em 'coluna'.
+
+### O que é responsividade?
+
+- Quando o site adapta o tamanho de suas páginas(Layout) de acordo com o tamanho da tela do dispositivo no qual ele está sendo acessado ou quando diminuímos o tamanho da janela do navegador (essa transformação pode ser feita também quando aplicamos um zoom na página), dizemos que este site é um site responsivo.
+- A responsividade não só altera o tamanho das fontes e elementos, como suporta qualquer mudança como por exemplo: na cor de fundo, cor de texto, bordas, etc. Isso depende dos estilos aplicados dentro das medias queries no arquivo CSS.
+- Se você atribuir uma cor de fundo diferente no body dentro da media query, a cor só vai alterar quando a tela atingir o tamanho definido por ela.
 
 ## Ajuda
 
@@ -179,6 +167,11 @@
     </html>
   ```
 
+  ```html
+    <p class="paragrafo"></p>
+    <p class="paragrafo"></p>
+  ```
+
 - CSS
 
   ```css
@@ -194,5 +187,40 @@
     p {
       font-family: verdana;
       font-size: 20px;
+    }
+  ```
+
+- Exemplo de :root
+  
+  ```css
+    :root {
+      --cor-fundo: #000;
+      --cor-secundaria: #FF7AC5;
+
+      --fonte-texto: "Montserrat", sans-serif;
+    }
+
+    body {
+      background: var(--cor-fundo);
+    }
+
+    .cabecalho__menu__link {
+      font-family: var(--fonte-texto);
+      color: var(--cor-secundaria);
+    }
+  ```
+
+- Exemplo de media queries
+
+  ```css
+    @media (max-width: 768px) {
+      body {
+        overflow: scroll;
+        height: auto;
+      }
+      .apresentacao {
+        flex-direction: column-reverse;
+        overflow: hidden;
+      }
     }
   ```
