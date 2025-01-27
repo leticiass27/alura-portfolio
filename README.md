@@ -16,20 +16,6 @@
   - Um elemento HTML é definido por uma tag inicial, algum conteúdo e uma tag final
     - Os elementos HTML informam ao navegador como exibir o conteúdo
     - Os elementos HTML rotulam partes do conteúdo como “este é um título”, “este é um parágrafo”, “este é um link”, etc.
-- Exemplo:
-
-  ```html
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Página HTML</title>
-    </head>
-    <body>
-        <h1>Olá Mundo!</h1>
-        <p>Olá mundo com HTML.</p>
-    </body>
-    </html>
-  ```
 
   - `<!DOCTYPE html>`: Define que este documento é um documento HTML
   - `<html>`: É o elemento raiz de uma página HTML
@@ -47,6 +33,10 @@
 - Para criarmos um título em destaque abrimos a tag com `<h1>` e fechamos com `</h1>`. E para adicionar parágrafos usamos as tags `<p>` e também fechamos com `</p>`.
 - A tag `<button>` é diferente da tag `<a>`, pois, além da semântica, a finalidade também é outra. Usamos `<button>` para criar um botão de ação e `<a>` para indicar um link.
   - As tags são diferentes em ambos os aspectos e é necessário saber utilizar cada uma na sua função correta. Enquanto `<button>` pode ser utilizada para ações como envios de formulários, a tag `<a>` não possui essa funcionalidade, já que seu papel é apenas redirecionar o usuário para diferentes urls.
+- Ao adicionar links de navegação ao `<header>`, devemos criar uma `<nav>`, com um `<a>` para cada link, e adicionar seu endereço na propriedade href.
+- Para facilitar em alguns momentos do codigo, quando formos criar uma tag e essa tag for de uma vez podemos, com a ajuda do VSCode, multiplicar a quantidade daquela tag. Exemplo: Queremos colocar dois paragrafos no nosso codigo, então escrevemos <p*2> e dá um enter, irá aparecer duas tags "p"
+  - E se quiser ja nomear aquela tag, só adicionar ponto (quando for uma class, caso queira ser um id só trocar o ponto pela hash) + apelido da tag. Exemplo: "<p.paragrafo__sobremim>" ou "<p*2.paragrafo__sobremim>" ou "<p#titulo__sobremim>"
+    - `<p id="titulo__sobremim"></p>`
 
 ## Modo Quirks
 >
@@ -86,6 +76,14 @@
 - Viewport é a porção de área visível de um plano e é utilizada como unidade de medida no CSS para criar páginas Web 100% responsivas. Em outras palavras, a viewport varia de dispositivo para dispositivo, por exemplo em computadores, tablets e celulares, cada tela possui dimensões diferentes e enquanto uma página não responsiva apresentaria os elementos desproporcionais, uma página responsiva utilizando viewport teria seus elementos adequados a cada proporção.
 - box-sizing é responsável por como a largura e a altura totais de um elemento são calculadas.
 - Flexbox é uma ferramenta do CSS que visa organizar os elementos de uma página HTML de forma dinâmica e mantendo um layout flexível.
+- O atributo ":root" irá criar variaveis para que você não precise repetir o mesmo codigo varias vezes.
+  - A variável precisa ser declarada com um hífen duplo (--) no início, para que seja reconhecida como variável e não como propriedade CSS.
+  - Para que o valor seja alterada, é preciso que a variável não seja apenas declarada dentro de :root, ela precisa ser aplicada também dentro das tags.
+- Media Queries permite que você aplique estilos CSS dependendo do tipo de mídia de um dispositivo (como impressão ou tela) ou outros recursos ou características, como resolução ou orientação da tela, proporção , largura ou altura da janela de visualização do navegador , preferências do usuário, como preferir movimento reduzido, uso de dados ou transparência.
+  - Exemplo: max-width: 768px. A media querie sabe que precisa ter uma largura de no máximo "768px" para aplicar os estilos CSS: @media (max-width: 768px).
+  - Podemos definir uma largura máxima de "425px" para o celular: @media (max-width: 425px), e em outra media query definir uma largura máxima de "768px" para os tablets: @media (max-width: 768px), e então atribuímos os ajustes necessários dentro de cada media query, dessa forma teremos nosso site 100% responsivo.
+  - Podemos também definir intervalos para os tamanhos de telas com um único media query, atribuímos o valor mínimo e depois o valor máximo separando ele pelo atributo and, veja: @media (min-width: 426px ) and (max-width: 768px), nesse caso os estilos serão aplicados em telas de no mínimo "426px" e de no máximo "768px".
+  - Quando colocamos width = auto podemos substituir para width = 100%.
 
 ### Propriedades CSS
 
@@ -94,6 +92,51 @@
 - "background" serve para configurar todas as propriedades do plano de fundo em uma declaração mais implícita.
 - "border" é responsável pelas bordas dos elementos HTML. Ao inserir um elemento em um documento HTML, há várias possibilidades de estilizar sua borda. Você pode utilizar estilos que a propriedade já possui, além de poder também alterar sua cor, espessura e até mesmo seu formato!
 - "gap" não é exclusiva do Flexbox, porém é utilizada quase sempre em conjunto com ele. Ela especifica no CSS o tamanho dos espaços entre linhas e colunas em layouts de grid, flex e multi-column. Sua sintaxe é bem simples e ela aceita um ou dois valores.
+- "flex-direction: column" o objeto/valor irá se posicionar verticalmente, já que define que a direção do display: flex deve ser em 'coluna'.
+
+### Unidade de medida
+
+- CSS tem várias unidades diferentes para expressar um comprimento.
+- Muitas propriedades CSS aceitam valores de "comprimento", como width, margin, padding, font-size, etc.
+- Comprimento é um número seguido por uma unidade de comprimento, como 10px, 2em, etc.
+- Para algumas propriedades CSS, comprimentos negativos são permitidos.
+- Existem dois tipos de unidades de comprimento: absoluta e relativa .
+- Um espaço em branco não pode aparecer entre o número e a unidade. No entanto, se o valor for 0, a unidade pode ser omitida.
+
+#### Unidades absolutas
+
+- As unidades de comprimento absoluto são fixas e um comprimento expresso em qualquer uma delas aparecerá exatamente como aquele tamanho.
+- Unidades de comprimento absoluto não são recomendadas para uso em tela, porque os tamanhos de tela variam muito. No entanto, elas podem ser usadas se o meio de saída for conhecido, como para layout de impressão.
+  - cm (centimetros)
+  - mm (milimetros)
+  - in (polegadas[1in = 96px = 2.54cm])
+  - px (pixels [1px = 1/96th of 1in])
+    - Pixels (px) são relativos ao dispositivo de visualização. Para dispositivos de baixo dpi, 1px é um pixel de dispositivo (ponto) da tela. Para impressoras e telas de alta resolução, 1px implica em vários pixels de dispositivo.
+  - pt (points [1pt = 1/72 of 1in])
+  - pc (picas [1pc = 12 pt])
+
+#### Unidades relativas
+
+- Unidades de comprimento relativo especificam um comprimento relativo a outra propriedade de comprimento. Unidades de comprimento relativo escalam melhor entre diferentes mídias de renderização.
+- As unidades "em" e "rem" são práticas para criar um layout perfeitamente escalável!
+- Viewport = tamanho da janela do navegador. Se a viewport tiver 50 cm de largura, 1vw = 0,5 cm.
+  - em: Em relação ao tamanho da fonte do elemento (2em significa 2 vezes o tamanho da fonte atual)
+  - ex: Em relação à altura x da fonte atual (raramente usada)
+  - ch: Em relação à largura do "0" (zero)
+  - rem: Em relação ao tamanho da fonte do elemento raiz
+    - Usamos uma escala para mudar de pixels para rem. Nessa escala utiliza-se o valor mais recomendado pelos navegadores, que é de 16, então 16px equivale a 1rem e 32px equivale a 2rem.
+    - Quando não é definido um tamanho de fonte padrão na raiz do projeto, um REM por padrão do browser equivale a 16px.
+  - vw: Relativo a 1% da largura da janela de visualização*
+  - vh: Relativo a 1% da altura da janela de visualização*
+  - vmin: Em relação a 1% da dimensão menor da janela de visualização*
+  - vmax: Em relação a 1% da dimensão maior da janela de visualização*
+  - %: Em relação ao elemento pai
+
+### O que é responsividade?
+
+- Quando o site adapta o tamanho de suas páginas(Layout) de acordo com o tamanho da tela do dispositivo no qual ele está sendo acessado ou quando diminuímos o tamanho da janela do navegador (essa transformação pode ser feita também quando aplicamos um zoom na página), dizemos que este site é um site responsivo.
+- A responsividade não só altera o tamanho das fontes e elementos, como suporta qualquer mudança como por exemplo: na cor de fundo, cor de texto, bordas, etc. Isso depende dos estilos aplicados dentro das medias queries no arquivo CSS.
+- Se você atribuir uma cor de fundo diferente no body dentro da media query, a cor só vai alterar quando a tela atingir o tamanho definido por ela.
 
 ## Ajuda
 
@@ -103,10 +146,14 @@
 - CTRL + N: Abre um novo arquivo
 - CTRL + S: Salva o arquivo
 - ALT + Z: Quebra a linha da area de código
+- CTRL + K + C: Comenta a(s) linha(s) (de acordo com o tipo do arquivo)
 
 ### Links
 
 - Introdução com [W3Schools](https://www.w3schools.com/html/html_intro.asp)
+- CSS Borders com [W3Schools](https://www.w3schools.com/css/css_border.asp)
+- CSS Hover com [W3Schools](https://www.w3schools.com/CSSref/sel_hover.php)
+- Unidades CSS com [W3Schools](https://www.w3schools.com/cssref/css_units.php)
 
 ### Extensões (VSCode)
 
@@ -126,6 +173,19 @@
 ### Exemplos basicos
 
 - HTML
+  
+  ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Página HTML</title>
+    </head>
+    <body>
+        <h1>Olá Mundo!</h1>
+        <p>Olá mundo com HTML.</p>
+    </body>
+    </html>
+  ```
 
   ```html
     <!DOCTYPE html>
@@ -146,6 +206,11 @@
     </html>
   ```
 
+  ```html
+    <p class="paragrafo"></p>
+    <p class="paragrafo"></p>
+  ```
+
 - CSS
 
   ```css
@@ -161,5 +226,40 @@
     p {
       font-family: verdana;
       font-size: 20px;
+    }
+  ```
+
+- Exemplo de :root
+  
+  ```css
+    :root {
+      --cor-fundo: #000;
+      --cor-secundaria: #FF7AC5;
+
+      --fonte-texto: "Montserrat", sans-serif;
+    }
+
+    body {
+      background: var(--cor-fundo);
+    }
+
+    .cabecalho__menu__link {
+      font-family: var(--fonte-texto);
+      color: var(--cor-secundaria);
+    }
+  ```
+
+- Exemplo de media queries
+
+  ```css
+    @media (max-width: 768px) {
+      body {
+        overflow: scroll;
+        height: auto;
+      }
+      .apresentacao {
+        flex-direction: column-reverse;
+        overflow: hidden;
+      }
     }
   ```
