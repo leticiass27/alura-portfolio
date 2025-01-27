@@ -156,13 +156,24 @@ body {
     }
 
     .apresentacao {
-        margin-top: 2%;
+        margin: 2%;
         flex-direction: column-reverse;
         overflow: hidden;
     }
 
-    .foto {
+    .apresentacao__conteudo {
+        width: 95%;
+    }
+
+    .apresentacao__imagem {
         width: 230px;
         height: auto;
+    }
+
+    .rodape {
+        padding: 14px;
+        position: relative;
+        width: 100%;
+        margin-top: 25px;
     }
 }

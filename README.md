@@ -16,20 +16,6 @@
   - Um elemento HTML é definido por uma tag inicial, algum conteúdo e uma tag final
     - Os elementos HTML informam ao navegador como exibir o conteúdo
     - Os elementos HTML rotulam partes do conteúdo como “este é um título”, “este é um parágrafo”, “este é um link”, etc.
-- Exemplo:
-
-  ```html
-    <!DOCTYPE html>
-    <html>
-    <head>
-        <title>Página HTML</title>
-    </head>
-    <body>
-        <h1>Olá Mundo!</h1>
-        <p>Olá mundo com HTML.</p>
-    </body>
-    </html>
-  ```
 
   - `<!DOCTYPE html>`: Define que este documento é um documento HTML
   - `<html>`: É o elemento raiz de uma página HTML
@@ -97,6 +83,7 @@
   - Exemplo: max-width: 768px. A media querie sabe que precisa ter uma largura de no máximo "768px" para aplicar os estilos CSS: @media (max-width: 768px).
   - Podemos definir uma largura máxima de "425px" para o celular: @media (max-width: 425px), e em outra media query definir uma largura máxima de "768px" para os tablets: @media (max-width: 768px), e então atribuímos os ajustes necessários dentro de cada media query, dessa forma teremos nosso site 100% responsivo.
   - Podemos também definir intervalos para os tamanhos de telas com um único media query, atribuímos o valor mínimo e depois o valor máximo separando ele pelo atributo and, veja: @media (min-width: 426px ) and (max-width: 768px), nesse caso os estilos serão aplicados em telas de no mínimo "426px" e de no máximo "768px".
+  - Quando colocamos width = auto podemos substituir para width = 100%.
 
 ### Propriedades CSS
 
@@ -186,6 +173,19 @@
 ### Exemplos basicos
 
 - HTML
+  
+  ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Página HTML</title>
+    </head>
+    <body>
+        <h1>Olá Mundo!</h1>
+        <p>Olá mundo com HTML.</p>
+    </body>
+    </html>
+  ```
 
   ```html
     <!DOCTYPE html>
